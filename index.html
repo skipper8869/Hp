@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Élégance Agency – Exklusiver Begleitservice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__logo-em">É</span>légance
+      <span class="nav__logo-sub">AGENCY</span>
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#models">Unsere Damen</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">Über uns</a></li>
+      <li><a href="#contact" class="nav__cta">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__tagline">Exklusiver Begleitservice</p>
+      <h1 class="hero__title">Élégance<br /><em>Agency</em></h1>
+      <p class="hero__sub">Diskretion, Stil und unvergessliche Begegnungen –<br />für anspruchsvolle Herren und Damen.</p>
+      <a href="#models" class="btn btn--gold">Unsere Damen entdecken</a>
+    </div>
+    <div class="hero__scroll">
+      <span>Scrollen</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO BAND ===== -->
+  <section class="band">
+    <div class="band__inner">
+      <div class="band__item">
+        <span class="band__icon">◆</span>
+        <p>100 % Diskret</p>
+      </div>
+      <div class="band__item">
+        <span class="band__icon">◆</span>
+        <p>Geprüfte Damen</p>
+      </div>
+      <div class="band__item">
+        <span class="band__icon">◆</span>
+        <p>Individuelle Wünsche</p>
+      </div>
+      <div class="band__item">
+        <span class="band__icon">◆</span>
+        <p>24/7 Buchung</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODELS ===== -->
+  <section class="section models" id="models">
+    <div class="section__header">
+      <p class="section__label">Unsere Damen</p>
+      <h2 class="section__title">Wählen Sie Ihre <em>Begleitung</em></h2>
+      <p class="section__desc">Jede unserer Damen wurde sorgfältig ausgewählt und überzeugt durch Persönlichkeit, Stil und Bildung.</p>
+    </div>
+
+    <!-- Filter -->
+    <div class="models__filter">
+      <button class="filter-btn active" data-filter="all">Alle</button>
+      <button class="filter-btn" data-filter="blonde">Blond</button>
+      <button class="filter-btn" data-filter="brunette">Brünett</button>
+      <button class="filter-btn" data-filter="vip">VIP</button>
+    </div>
+
+    <div class="models__grid" id="modelsGrid">
+
+      <!-- Model 1 -->
+      <div class="model-card" data-tags="blonde vip">
+        <div class="model-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500&q=80" alt="Sophia" loading="lazy" />
+          <span class="model-card__badge">VIP</span>
+          <div class="model-card__overlay">
+            <button class="btn btn--outline" onclick="openProfile(0)">Profil ansehen</button>
+          </div>
+        </div>
+        <div class="model-card__info">
+          <h3>Sophia, 26</h3>
+          <p class="model-card__city">München · Berlin</p>
+          <div class="model-card__tags">
+            <span>Dinner</span><span>Reisen</span><span>Events</span>
+          </div>
+          <p class="model-card__price">ab 300 €/Std.</p>
+        </div>
+      </div>
+
+      <!-- Model 2 -->
+      <div class="model-card" data-tags="brunette">
+        <div class="model-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&q=80" alt="Isabella" loading="lazy" />
+          <div class="model-card__overlay">
+            <button class="btn btn--outline" onclick="openProfile(1)">Profil ansehen</button>
+          </div>
+        </div>
+        <div class="model-card__info">
+          <h3>Isabella, 29</h3>
+          <p class="model-card__city">Frankfurt · Hamburg</p>
+          <div class="model-card__tags">
+            <span>Kultur</span><span>Business</span><span>Reisen</span>
+          </div>
+          <p class="model-card__price">ab 250 €/Std.</p>
+        </div>
+      </div>
+
+      <!-- Model 3 -->
+      <div class="model-card" data-tags="blonde">
+        <div class="model-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=500&q=80" alt="Valentina" loading="lazy" />
+          <div class="model-card__overlay">
+            <button class="btn btn--outline" onclick="openProfile(2)">Profil ansehen</button>
+          </div>
+        </div>
+        <div class="model-card__info">
+          <h3>Valentina, 24</h3>
+          <p class="model-card__city">Düsseldorf · Köln</p>
+          <div class="model-card__tags">
+            <span>Mode</span><span>Kunst</span><span>Dinner</span>
+          </div>
+          <p class="model-card__price">ab 220 €/Std.</p>
+        </div>
+      </div>
+
+      <!-- Model 4 -->
+      <div class="model-card" data-tags="brunette vip">
+        <div class="model-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&q=80" alt="Elena" loading="lazy" />
+          <span class="model-card__badge">VIP</span>
+          <div class="model-card__overlay">
+            <button class="btn btn--outline" onclick="openProfile(3)">Profil ansehen</button>
+          </div>
+        </div>
+        <div class="model-card__info">
+          <h3>Elena, 31</h3>
+          <p class="model-card__city">Wien · Zürich</p>
+          <div class="model-card__tags">
+            <span>Events</span><span>Business</span><span>Wellness</span>
+          </div>
+          <p class="model-card__price">ab 350 €/Std.</p>
+        </div>
+      </div>
+
+      <!-- Model 5 -->
+      <div class="model-card" data-tags="blonde">
+        <div class="model-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=500&q=80" alt="Mia" loading="lazy" />
+          <div class="model-card__overlay">
+            <button class="btn btn--outline" onclick="openProfile(4)">Profil ansehen</button>
+          </div>
+        </div>
+        <div class="model-card__info">
+          <h3>Mia, 23</h3>
+          <p class="model-card__city">Stuttgart · München</p>
+          <div class="model-card__tags">
+            <span>Sport</span><span>Reisen</span><span>Dinner</span>
+          </div>
+          <p class="model-card__price">ab 200 €/Std.</p>
+        </div>
+      </div>
+
+      <!-- Model 6 -->
+      <div class="model-card" data-tags="brunette">
+        <div class="model-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=500&q=80" alt="Natalie" loading="lazy" />
+          <div class="model-card__overlay">
+            <button class="btn btn--outline" onclick="openProfile(5)">Profil ansehen</button>
+          </div>
+        </div>
+        <div class="model-card__info">
+          <h3>Natalie, 27</h3>
+          <p class="model-card__city">Berlin · Leipzig</p>
+          <div class="model-card__tags">
+            <span>Theater</span><span>Musik</span><span>Reisen</span>
+          </div>
+          <p class="model-card__price">ab 230 €/Std.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PROFILE MODAL ===== -->
+  <div class="modal" id="profileModal">
+    <div class="modal__backdrop" onclick="closeProfile()"></div>
+    <div class="modal__box">
+      <button class="modal__close" onclick="closeProfile()">✕</button>
+      <div class="modal__inner" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section services" id="services">
+    <div class="section__header">
+      <p class="section__label">Was wir bieten</p>
+      <h2 class="section__title">Unsere <em>Services</em></h2>
+      <p class="section__desc">Wir arrangieren exklusive Begegnungen auf höchstem Niveau – immer diskret, immer persönlich.</p>
+    </div>
+
+    <div class="services__grid">
+
+      <div class="service-card">
+        <div class="service-card__icon">🍷</div>
+        <h3>Dinner Begleitung</h3>
+        <p>Ihre charmante Begleitung für exklusive Restaurantbesuche, private Dinners oder Firmenveranstaltungen.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">✈️</div>
+        <h3>Reisebegleitung</h3>
+        <p>Begleitung auf Geschäfts- und Privatreisen, Urlaube und Kurztrips – national und international.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">🎭</div>
+        <h3>Events & Gala</h3>
+        <p>Repräsentation bei Premieren, Galas, Kunstauktionen und gesellschaftlichen Veranstaltungen.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">💼</div>
+        <h3>Business Begleitung</h3>
+        <p>Diskrete Begleitung für Geschäftsessen, Messen, Kongresse und Empfänge.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">🌿</div>
+        <h3>Wellness & Spa</h3>
+        <p>Gemeinsame Wellness-Auszeiten, Spa-Besuche und Erholungsurlaube in exklusiven Resorts.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">🏠</div>
+        <h3>Private Treffen</h3>
+        <p>Diskreter Besuch in Ihrem Hotel oder Ihrer Privatunterkunft – nach Absprache und Vereinbarung.</p>
+      </div>
+
+    </div>
+
+    <!-- Rates -->
+    <div class="rates">
+      <div class="section__header">
+        <p class="section__label">Preise</p>
+        <h2 class="section__title">Transparente <em>Konditionen</em></h2>
+      </div>
+      <div class="rates__grid">
+        <div class="rate-card">
+          <p class="rate-card__label">Standard</p>
+          <p class="rate-card__price">ab 200 €</p>
+          <p class="rate-card__unit">pro Stunde</p>
+          <ul>
+            <li>Dinner &amp; Events</li>
+            <li>bis 4 Stunden</li>
+            <li>lokale Begleitung</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline-gold">Anfragen</a>
+        </div>
+        <div class="rate-card rate-card--featured">
+          <p class="rate-card__label">Premium</p>
+          <p class="rate-card__price">ab 300 €</p>
+          <p class="rate-card__unit">pro Stunde</p>
+          <ul>
+            <li>Events, Reisen, Business</li>
+            <li>Ganztagesbegleitung</li>
+            <li>Übernachtung möglich</li>
+          </ul>
+          <a href="#contact" class="btn btn--gold">Anfragen</a>
+        </div>
+        <div class="rate-card">
+          <p class="rate-card__label">VIP</p>
+          <p class="rate-card__price">ab 350 €</p>
+          <p class="rate-card__unit">pro Stunde</p>
+          <ul>
+            <li>Exklusiver Service</li>
+            <li>Internationale Reisen</li>
+            <li>Individuelle Wünsche</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline-gold">Anfragen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="about__text">
+      <p class="section__label">Über uns</p>
+      <h2 class="section__title">Diskret. Stilvoll.<br /><em>Unvergesslich.</em></h2>
+      <p>Élégance Agency steht seit Jahren für den exklusivsten Begleitservice in der DACH-Region. Wir verbinden anspruchsvolle Klienten mit außergewöhnlichen Damen – immer auf Basis gegenseitigen Respekts und absoluter Diskretion.</p>
+      <p>Alle unsere Damen werden persönlich ausgewählt und begleiten Sie als intelligente, stilvolle Gesprächspartnerinnen auf höchstem Niveau.</p>
+      <div class="about__stats">
+        <div class="about__stat">
+          <span class="about__stat-num">150+</span>
+          <span>Zufriedene Klienten</span>
+        </div>
+        <div class="about__stat">
+          <span class="about__stat-num">30+</span>
+          <span>Exklusive Damen</span>
+        </div>
+        <div class="about__stat">
+          <span class="about__stat-num">10+</span>
+          <span>Jahre Erfahrung</span>
+        </div>
+      </div>
+    </div>
+    <div class="about__img-wrap">
+      <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=700&q=80" alt="Eleganter Abend" />
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials">
+    <div class="section__header">
+      <p class="section__label">Kundenstimmen</p>
+      <h2 class="section__title">Was unsere <em>Klienten</em> sagen</h2>
+    </div>
+    <div class="testimonials__grid">
+      <div class="testimonial">
+        <p class="testimonial__text">„Absolute Diskretion, unglaubliche Auswahl – ich bin seit Jahren Stammklient. Sophia hat meinen Geschäftsabend unvergesslich gemacht."</p>
+        <p class="testimonial__author">– M. B., Unternehmer, München</p>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial__text">„Top-Organisation, wunderschöne und gebildete Damen. Elena hat mich auf meiner Reise nach Wien begleitet – perfekt in jeder Hinsicht."</p>
+        <p class="testimonial__author">– T. K., Manager, Frankfurt</p>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial__text">„Ich habe selten eine so professionelle und stilvolle Agentur erlebt. Empfehle Élégance uneingeschränkt weiter."</p>
+        <p class="testimonial__author">– J. R., Investor, Zürich</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="section__header">
+      <p class="section__label">Buchung & Anfragen</p>
+      <h2 class="section__title">Kontaktieren Sie <em>uns</em></h2>
+      <p class="section__desc">Alle Anfragen werden streng vertraulich behandelt. Wir melden uns innerhalb von 2 Stunden.</p>
+    </div>
+    <div class="contact__layout">
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Ihr Name *</label>
+            <input type="text" id="name" name="name" placeholder="Diskret (Vorname genügt)" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" name="email" placeholder="ihre@email.de" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Telefon / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="+49 ..." />
+          </div>
+          <div class="form-group">
+            <label for="lady">Gewünschte Dame</label>
+            <select id="lady" name="lady">
+              <option value="">Keine Präferenz</option>
+              <option>Sophia</option>
+              <option>Isabella</option>
+              <option>Valentina</option>
+              <option>Elena</option>
+              <option>Mia</option>
+              <option>Natalie</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">Gewünschter Service</label>
+          <select id="service" name="service">
+            <option value="">Bitte wählen</option>
+            <option>Dinner Begleitung</option>
+            <option>Reisebegleitung</option>
+            <option>Events &amp; Gala</option>
+            <option>Business Begleitung</option>
+            <option>Wellness &amp; Spa</option>
+            <option>Private Treffen</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Ihre Nachricht</label>
+          <textarea id="message" name="message" rows="4" placeholder="Datum, Uhrzeit, Ort und besondere Wünsche..."></textarea>
+        </div>
+        <div class="form-group form-group--check">
+          <input type="checkbox" id="privacy" name="privacy" required />
+          <label for="privacy">Ich bestätige, dass ich volljährig bin und akzeptiere die Datenschutzbestimmungen.</label>
+        </div>
+        <button type="submit" class="btn btn--gold btn--full">Anfrage absenden</button>
+        <div class="form-success" id="formSuccess">Vielen Dank! Wir melden uns in Kürze bei Ihnen.</div>
+      </form>
+
+      <div class="contact-info">
+        <div class="contact-info__item">
+          <span class="contact-info__icon">📞</span>
+          <div>
+            <p class="contact-info__label">Telefon & WhatsApp</p>
+            <p>+49 (0) 800 000 00 00</p>
+          </div>
+        </div>
+        <div class="contact-info__item">
+          <span class="contact-info__icon">✉️</span>
+          <div>
+            <p class="contact-info__label">E-Mail</p>
+            <p>info@elegance-agency.de</p>
+          </div>
+        </div>
+        <div class="contact-info__item">
+          <span class="contact-info__icon">🕐</span>
+          <div>
+            <p class="contact-info__label">Erreichbarkeit</p>
+            <p>täglich 10:00 – 02:00 Uhr</p>
+          </div>
+        </div>
+        <div class="contact-info__item">
+          <span class="contact-info__icon">🔒</span>
+          <div>
+            <p class="contact-info__label">Diskretion</p>
+            <p>Absolute Vertraulichkeit garantiert</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <span class="nav__logo-em">É</span>légance <span class="nav__logo-sub">AGENCY</span>
+      </div>
+      <p class="footer__copy">© 2026 Élégance Agency · Alle Rechte vorbehalten</p>
+      <div class="footer__links">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">AGB</a>
+      </div>
+      <p class="footer__disclaimer">Diese Website richtet sich ausschließlich an Personen über 18 Jahre. Alle dargestellten Begleitservices sind legale, nicht-sexuelle Dienstleistungen.</p>
+    </div>
+  </footer>
+
+  <!-- Age Verification Modal -->
+  <div class="age-gate" id="ageGate">
+    <div class="age-gate__box">
+      <div class="age-gate__logo"><span class="nav__logo-em">É</span>légance</div>
+      <h2>Altersverifikation</h2>
+      <p>Diese Website enthält Inhalte, die nur für Erwachsene bestimmt sind.<br />Bitte bestätigen Sie Ihr Alter.</p>
+      <div class="age-gate__btns">
+        <button class="btn btn--gold" onclick="confirmAge()">Ich bin 18+ Jahre alt</button>
+        <button class="btn btn--ghost" onclick="window.location='https://www.google.de'">Verlassen</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
