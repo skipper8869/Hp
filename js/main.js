@@ -1,189 +1,169 @@
-/* ===== PROFILE DATA ===== */
+/* ============================================================
+   ÉLÉGANCE — Modern JS
+   ============================================================ */
+
+/* ===== DATA ===== */
 const profiles = [
   {
-    name: "Sophia",
-    age: 26,
-    city: "München · Berlin",
-    price: "ab 300 €/Std.",
-    badge: "VIP",
-    img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=700&q=80",
-    tags: ["Dinner", "Reisen", "Events", "Business"],
+    name: "Sophia", age: 26, city: "München · Berlin", price: "300 €", badge: "VIP",
+    tags: ["blonde", "vip"], chips: ["Dinner", "Reisen", "Events"],
+    img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&q=80",
     stats: { Größe: "172 cm", Figur: "Schlank", Augen: "Grün", Sprachen: "DE · EN · FR" },
-    bio: "Sophia ist eine kultivierte und weltgewandte Begleiterin mit einem Hintergrund in der Modebranche. Sie glänzt auf jedem gesellschaftlichen Parkett und ist die perfekte Begleiterin für exklusive Events, internationale Reisen und unvergessliche Abende. Mit ihrem natürlichen Charme und ihrer Intelligenz wird jede Begegnung zu einem unvergesslichen Erlebnis."
+    bio: "Sophia ist eine kultivierte, weltgewandte Begleiterin mit Hintergrund in der Modebranche. Sie glänzt auf jedem gesellschaftlichen Parkett — die perfekte Begleiterin für exklusive Events und internationale Reisen."
   },
   {
-    name: "Isabella",
-    age: 29,
-    city: "Frankfurt · Hamburg",
-    price: "ab 250 €/Std.",
-    badge: null,
-    img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=700&q=80",
-    tags: ["Kultur", "Business", "Reisen", "Dinner"],
+    name: "Isabella", age: 29, city: "Frankfurt · Hamburg", price: "250 €", badge: null,
+    tags: ["brunette"], chips: ["Kultur", "Business", "Reisen"],
+    img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80",
     stats: { Größe: "168 cm", Figur: "Kurvig", Augen: "Braun", Sprachen: "DE · EN · IT" },
-    bio: "Isabella hat Rechtswissenschaften studiert und begleitet Sie mit Kompetenz und Eleganz zu Business-Dinners, Konferenzen und Kulturveranstaltungen. Ihr Humor, ihre Bildung und ihr Stil machen sie zur idealen Partnerin auf Reisen und bei repräsentativen Anlässen."
+    bio: "Isabella hat Rechtswissenschaften studiert und begleitet Sie mit Kompetenz und Eleganz zu Business-Dinners und Kulturveranstaltungen. Bildung, Humor und Stil zeichnen sie aus."
   },
   {
-    name: "Valentina",
-    age: 24,
-    city: "Düsseldorf · Köln",
-    price: "ab 220 €/Std.",
-    badge: null,
-    img: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=700&q=80",
-    tags: ["Mode", "Kunst", "Dinner", "Events"],
+    name: "Valentina", age: 24, city: "Düsseldorf · Köln", price: "220 €", badge: null,
+    tags: ["blonde"], chips: ["Mode", "Kunst", "Dinner"],
+    img: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&q=80",
     stats: { Größe: "175 cm", Figur: "Schlank", Augen: "Blau", Sprachen: "DE · EN · ES" },
-    bio: "Valentina – ein echtes Naturtalent in Sachen Stil und Eleganz. Die leidenschaftliche Kunstliebhaberin und Hobbyfotografin begeistert durch ihre lebhafte Persönlichkeit und ihr modisches Gespür. Galerie-Eröffnungen, Modeevents und exklusive Dinners sind ihr Element."
+    bio: "Valentina — ein Naturtalent in Sachen Stil. Die leidenschaftliche Kunstliebhaberin begeistert durch ihre lebhafte Persönlichkeit. Galerie-Eröffnungen und exklusive Dinners sind ihr Element."
   },
   {
-    name: "Elena",
-    age: 31,
-    city: "Wien · Zürich",
-    price: "ab 350 €/Std.",
-    badge: "VIP",
-    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=700&q=80",
-    tags: ["Events", "Business", "Wellness", "Reisen"],
+    name: "Elena", age: 31, city: "Wien · Zürich", price: "350 €", badge: "VIP",
+    tags: ["brunette", "vip"], chips: ["Events", "Business", "Wellness"],
+    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80",
     stats: { Größe: "170 cm", Figur: "Athletisch", Augen: "Grau", Sprachen: "DE · EN · RU" },
-    bio: "Elena verbindet östeuropäische Eleganz mit westlichem Lifestyle. Die ehemalige Ballett-Tänzerin besticht durch außergewöhnliche Anmut und Kultiviertheit. Ob Opernball in Wien, Galadinner in Zürich oder Wellness-Retreat – Elena ist immer die strahlende Begleiterin an Ihrer Seite."
+    bio: "Elena verbindet osteuropäische Eleganz mit westlichem Lifestyle. Die ehemalige Ballett-Tänzerin besticht durch außergewöhnliche Anmut — ob Opernball, Galadinner oder Wellness-Retreat."
   },
   {
-    name: "Mia",
-    age: 23,
-    city: "Stuttgart · München",
-    price: "ab 200 €/Std.",
-    badge: null,
-    img: "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=700&q=80",
-    tags: ["Sport", "Reisen", "Dinner", "Events"],
+    name: "Mia", age: 23, city: "Stuttgart · München", price: "200 €", badge: null,
+    tags: ["blonde"], chips: ["Sport", "Reisen", "Dinner"],
+    img: "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=800&q=80",
     stats: { Größe: "165 cm", Figur: "Sportlich", Augen: "Grün", Sprachen: "DE · EN" },
-    bio: "Mia ist die jüngste und spontanste unserer Damen – voller Energie, Lebensfreude und einer ansteckenden Herzlichkeit. Die Sport-Enthusiastin begeistert mit ihrer unkomplizierten Art und ist die perfekte Begleiterin für Ausflüge, Reisen und entspannte Abendveranstaltungen."
+    bio: "Mia ist die spontanste unserer Damen — voller Energie und ansteckender Herzlichkeit. Die Sport-Enthusiastin ist die perfekte Begleiterin für Ausflüge, Reisen und entspannte Abende."
   },
   {
-    name: "Natalie",
-    age: 27,
-    city: "Berlin · Leipzig",
-    price: "ab 230 €/Std.",
-    badge: null,
-    img: "https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=700&q=80",
-    tags: ["Theater", "Musik", "Reisen", "Dinner"],
+    name: "Natalie", age: 27, city: "Berlin · Leipzig", price: "230 €", badge: null,
+    tags: ["brunette"], chips: ["Theater", "Musik", "Reisen"],
+    img: "https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=800&q=80",
     stats: { Größe: "169 cm", Figur: "Schlank", Augen: "Braun", Sprachen: "DE · EN · FR" },
-    bio: "Natalie hat Musikwissenschaften studiert und liebt Theater, Oper und klassische Konzerte. Ihre tiefe Allgemeinbildung, ihr Witz und ihr warmes Lächeln machen jedes Gespräch zu einem Vergnügen. Die perfekte Begleiterin für Kulturereignisse und feinsinnige Abende zu zweit."
+    bio: "Natalie hat Musikwissenschaften studiert und liebt Theater, Oper und klassische Konzerte. Tiefe Allgemeinbildung, Witz und ein warmes Lächeln machen jedes Gespräch zum Vergnügen."
   }
 ];
+
+const arrowSvg = `<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+/* ===== RENDER MODEL CARDS ===== */
+const grid = document.getElementById('modelsGrid');
+grid.innerHTML = profiles.map((p, i) => `
+  <article class="card" data-tags="${p.tags.join(' ')}" data-reveal style="transition-delay:${i * 60}ms">
+    <div class="card__img">
+      ${p.badge ? `<span class="card__badge">${p.badge}</span>` : ''}
+      <img src="${p.img}" alt="${p.name}" loading="lazy" />
+    </div>
+    <div class="card__body">
+      <h3 class="card__name">${p.name}, ${p.age}</h3>
+      <p class="card__city">📍 ${p.city}</p>
+      <div class="card__tags">${p.chips.map(c => `<span>${c}</span>`).join('')}</div>
+      <div class="card__foot">
+        <p class="card__price">ab <b>${p.price}</b>/Std.</p>
+        <button class="card__btn" aria-label="Profil ansehen" data-profile="${i}">${arrowSvg}</button>
+      </div>
+    </div>
+  </article>
+`).join('');
+
+/* Make whole card clickable for profile */
+grid.querySelectorAll('.card').forEach((card, i) => {
+  card.addEventListener('click', () => openProfile(i));
+});
+
+/* ===== POPULATE LADY SELECT ===== */
+const ladySelect = document.getElementById('ladySelect');
+profiles.forEach(p => {
+  const opt = document.createElement('option');
+  opt.textContent = p.name;
+  ladySelect.appendChild(opt);
+});
 
 /* ===== AGE GATE ===== */
 function confirmAge() {
   sessionStorage.setItem('ageVerified', '1');
-  document.getElementById('ageGate').classList.add('hidden');
+  document.getElementById('ageGate').classList.add('hide');
 }
-
 if (sessionStorage.getItem('ageVerified') === '1') {
-  document.getElementById('ageGate').classList.add('hidden');
+  document.getElementById('ageGate').classList.add('hide');
 }
 
-/* ===== NAV SCROLL ===== */
+/* ===== NAV ===== */
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-});
-
-/* ===== BURGER MENU ===== */
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks');
 
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+
 burger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
+  burger.classList.toggle('open');
 });
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  burger.classList.remove('open');
+}));
 
-navLinks.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => navLinks.classList.remove('open'));
-});
-
-/* ===== MODEL FILTER ===== */
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    const filter = btn.dataset.filter;
-    document.querySelectorAll('.model-card').forEach(card => {
-      if (filter === 'all') {
-        card.classList.remove('hidden');
-      } else {
-        const tags = card.dataset.tags || '';
-        card.classList.toggle('hidden', !tags.includes(filter));
-      }
+/* ===== FILTERS ===== */
+document.querySelectorAll('.chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    const f = chip.dataset.filter;
+    grid.querySelectorAll('.card').forEach(card => {
+      const show = f === 'all' || (card.dataset.tags || '').includes(f);
+      card.classList.toggle('hide', !show);
     });
   });
 });
 
 /* ===== PROFILE MODAL ===== */
-function openProfile(index) {
-  const p = profiles[index];
-  const modal = document.getElementById('profileModal');
-  const content = document.getElementById('modalContent');
+const modal = document.getElementById('profileModal');
+const modalContent = document.getElementById('modalContent');
 
-  content.innerHTML = `
-    <div class="modal-img">
-      <img src="${p.img}" alt="${p.name}" />
-    </div>
-    <div class="modal-details">
-      <div>
-        <h2>${p.name}, ${p.age}</h2>
-        <p style="color:var(--text-muted);font-size:13px;margin-top:4px;">${p.city}</p>
+function openProfile(i) {
+  const p = profiles[i];
+  modalContent.innerHTML = `
+    <div class="modal__img"><img src="${p.img}" alt="${p.name}" /></div>
+    <div class="modal__details">
+      <h2 class="modal__name">${p.name}, ${p.age}<span>📍 ${p.city}</span></h2>
+      <div class="card__tags">${p.chips.map(c => `<span>${c}</span>`).join('')}</div>
+      <div class="modal__stats">
+        ${Object.entries(p.stats).map(([k, v]) => `<div class="modal__stat"><b>${k}</b><span>${v}</span></div>`).join('')}
       </div>
-      ${p.badge ? `<span class="model-card__badge" style="display:inline-block;position:static;">${p.badge}</span>` : ''}
-      <div class="model-card__tags">
-        ${p.tags.map(t => `<span>${t}</span>`).join('')}
-      </div>
-      <div class="modal-stats">
-        ${Object.entries(p.stats).map(([k, v]) => `
-          <div class="modal-stat">
-            <p class="modal-stat__label">${k}</p>
-            <p class="modal-stat__val">${v}</p>
-          </div>
-        `).join('')}
-      </div>
-      <p class="modal-bio">${p.bio}</p>
-      <div>
-        <p style="color:var(--gold);font-size:14px;margin-bottom:14px;">${p.price}</p>
-        <a href="#contact" class="btn btn--gold" onclick="closeProfile()">Jetzt anfragen</a>
-      </div>
-    </div>
-  `;
-
+      <p class="modal__bio">${p.bio}</p>
+      <p class="modal__price">ab ${p.price} / Stunde</p>
+      <a href="#contact" class="btn btn--primary btn--lg" data-close>Jetzt anfragen ${arrowSvg}</a>
+    </div>`;
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
 function closeProfile() {
-  document.getElementById('profileModal').classList.remove('open');
+  modal.classList.remove('open');
   document.body.style.overflow = '';
 }
 
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeProfile();
-});
+modal.addEventListener('click', e => { if (e.target.hasAttribute('data-close')) closeProfile(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProfile(); });
 
 /* ===== CONTACT FORM ===== */
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
-  const success = document.getElementById('formSuccess');
-  success.style.display = 'block';
+  const ok = document.getElementById('formOk');
+  ok.classList.add('show');
   this.reset();
-  setTimeout(() => { success.style.display = 'none'; }, 5000);
+  setTimeout(() => ok.classList.remove('show'), 5000);
 });
 
 /* ===== SCROLL REVEAL ===== */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.1 });
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
 
-document.querySelectorAll('.model-card, .service-card, .rate-card, .testimonial, .contact-info__item').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
-});
+document.querySelectorAll('.section__head, .card, .bento__item, .rate, .quote, .about__media, .about__text, .contact-intro, .form')
+  .forEach(el => { el.setAttribute('data-reveal', ''); io.observe(el); });
